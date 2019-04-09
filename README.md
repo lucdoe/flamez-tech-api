@@ -1,4 +1,10 @@
 # flamez.tech
-First Python Application with Flask &amp; MySQL
+Contains my 'First Python Application' with Flask &amp; MySQL.
 
-- Test
+Technologies used:
+- Python
+- Flask
+- MySQL (SQLAlchemy Flask Module)
+- Javascript
+- Jinja2 (Standard Template Engine Flask)
+
