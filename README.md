@@ -3,12 +3,12 @@ Contains my 'First Python Application' with Flask &amp; MySQL.
 
 Technologies used:
 
-- #*Backend
+- #Backend
   - Python
   - Flask
   - MySQL (SQLAlchemy Flask Module)
 
-- #*Frontend
+- Frontend
   - Javascript
   - HTML -> Jinja2 (Standard Template Engine Flask)
   - CSS 
