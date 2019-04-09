@@ -1,14 +1,14 @@
 # flamez.tech
-Contains a Web Application build with FLASK (Python Microframework, http://flask.pocoo.org/docs/1.0/).
+Contains a Web Application build with **FLASK (Python Microframework, http://flask.pocoo.org/docs/1.0/)**.
 
 Technologies used:
 
-- *Backend*
+- **Backend**
   - Python
   - Flask
   - MySQL (SQLAlchemy Flask Module)
 
-- *Frontend*
+- **Frontend**
   - Javascript
   - HTML -> Jinja2 (Standard Template Engine Flask)
   - CSS 
