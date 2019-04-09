@@ -1,5 +1,5 @@
 # flamez.tech
-Contains my 'First Python Application' with Flask &amp; MySQL.
+Contains a Web Application build with FLASK (Python Microframework, http://flask.pocoo.org/docs/1.0/).
 
 Technologies used:
 
