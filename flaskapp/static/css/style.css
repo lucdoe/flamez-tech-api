@@ -5,7 +5,7 @@ html {
 /* Style the top navigation bar */
 .topnav {
     overflow: hidden;
-    background-color: orange;
+    background-color: lightblue;
     width: 100%;
 }
 
@@ -13,19 +13,21 @@ html {
 .topnav a {
     float: left;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     /*text-transform: uppercase;*/
     margin-left: 35px;
-    font-size: 25px;
+    font-size: 15px;
+    letter-spacing: 1px;
 }
 
 /* Change color on hover */
 .topnav a:hover {
-    background-color: white;
+    background-color: orange;
     color: black;
+    border-radius: 10px;
 }
 
 #table {
@@ -51,41 +53,44 @@ html {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: orange;
-    color: white;
+    background-color: lightblue;
+    color: black;
 }
 
 
 #myInput {
-  width: 25%; 
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 15px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  border-radius: 12px;
-  margin: 50px;
+    width: 25%;
+    font-size: 16px;
+    /* Increase font-size */
+    padding: 12px 20px 12px 15px;
+    /* Add some padding */
+    border: 1px solid #ddd;
+    /* Add a grey border */
+    border-radius: 12px;
+    margin: 35px;
 }
 
 #amount-counter {
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 50px;
 }
 
 #create_new {
-  border-radius: 12px;
-  background-color: orange;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  padding: 12px 30px;
+    border-radius: 10px;
+    background-color: lightblue;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 12px 30px;
 }
 
 #create_new:hover {
-  background-color: green;
-  cursor: pointer;
+    background-color: orange;
+    color: black;
+    cursor: pointer;
 }
-

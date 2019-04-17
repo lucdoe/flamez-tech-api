@@ -1,25 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
-<!-- <form method="POST" action="">
+<form method="POST" action="">
     <center>
-    <H1>Enter Contact details </H1> <br>
-    First Name <input type ="text" name= "first_name" /> <br>
-    Last Name <input type ="text" name = "last_name" /> <br>
-    <input type = "submit">
+        <H1>Enter Contact details </H1> <br>
+        First Name <input type="text" name="first_name" /> <br>
+        Last Name <input type="text" name="last_name" /> <br>
+        <input type="submit">
     </center>
-</form> -->
-
-{% for use in user %}
-		<p>
-            {{ use.0 }}
-            {{ use.1 }}
-            {{ use.mail_adress }}
-            {{ use.phone_number }}
-            {{ use.phone_number_mobile }}
-            {{ use.gender }}
-            {{ use.adress_id }}
-            {{ use.item_id }}
-            {{ use.enrollment_id }}
-        </p>
-        {% endfor %}
+</form>
 {% endblock content %}
