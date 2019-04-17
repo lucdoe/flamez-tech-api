@@ -18,7 +18,7 @@ Contains a Web Application build with **FLASK (Python Microframework, [Flask Doc
  2.) Installing & Using the Application
  --------------------------------------------------
 - **Install Process**
-  - Follow this 3 minute Installing Process: [Install Guide]http://flask.pocoo.org/docs/1.0/installation/
+  - Follow this 3 minute Installing Process: (Flask Docu, [Install Guide](http://flask.pocoo.org/docs/1.0/installation/))
   - Now you shiould have an Virtual Env. and Flask installed
   - Next download the repository and paste it in the new folder you created in the Tutorial
   - now go into the newly created directory in your console 
