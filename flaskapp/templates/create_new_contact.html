@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Create New Contact</h1>
+<div id="input-section">
+<div id="input">
+    <label id="input_label" for="first_name">First Name</label><br>
+    <input id="input_field" type="text" name="first_name" placeholder="First Name"> <br>
+</div>
+<div id="input">
+    <label id="input_label" for="first_name">Last Name</label><br>
+    <input id="input_field" type="text" name="last_name" placeholder="Last Name"> <br>
+</div>
+<div id="input">
+    <label id="input_label" for="first_name">Mail adress</label><br>
+    <input id="input_field" type="text" name="mail_adress" placeholder="E-Mail"> <br>
+</div>
+<div id="input">
+    <label id="input_label" for="first_name">Phone Number</label><br>
+    <input id="input_field" type="text" name="phone_number" placeholder="Phone"> <br>
+</div>
+<div id="input">
+    <label id="input_label" for="first_name">Mobile Number</label><br>
+    <input id="input_field" type="text" name="phone_number_mobile" placeholder="Mobile"> <br>
+</div>
+</div>
+<form>
+    <button id="Submit" type="submit" value="Send"> Submit </button>
+</form>
+{% endblock content %}

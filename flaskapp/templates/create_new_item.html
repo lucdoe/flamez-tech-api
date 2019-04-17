@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Add New Item</h1>
+<div id="input-section">
+    <div id="input">
+        <label id="input_label" for="name">Item Name</label><br>
+        <input id="input_field" type="text" name="name" placeholder="Item Name"> <br>
+    </div>
+    <div id="input">
+        <label id="input_label" for="type">Item Type</label><br>
+        <input id="input_field" type="text" name="type" placeholder="Item Type"> <br>
+    </div>
+    <div id="input">
+        <label id="input_label" for="Status">Item Status</label> <br>
+        <select id="input_field" id="Status" name="Status">
+            <option value="lent">Lent out</option>
+            <option value="storeage">In Storeage</option>
+            <option value="repair">In Repair</option>
+        </select>
+    </div>
+    <div id="input">
+        <label id="input_label" for="Location">ItemPrice Location</label><br>
+        <input id="input_field" type="text" name="Location" placeholder="Location"> <br>
+    </div>
+    <div id="input">
+        <label id="input_label" for="Price">Item Price</label><br>
+        <input id="input_field" type="text" name="Price" placeholder="Price"> <br>
+    </div>
+</div>
+<form>
+    <button id="Submit" type="submit" value="Send"> Submit </button>
+</form>
+{% endblock content %}

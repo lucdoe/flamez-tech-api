@@ -94,3 +94,39 @@ html {
     color: black;
     cursor: pointer;
 }
+
+#input {
+  width: 100%;
+}
+
+#input_field {
+  font-size: 16px;
+  margin: 10px 10px 25px 0px;
+}
+
+#input-label {
+  text-align: left;
+}
+
+#Submit {
+  border-radius: 10px;
+  background-color: lightblue;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding: 12px 30px;
+}
+
+#Submit:hover {
+  background-color: green;
+  color: black;
+  cursor: pointer;
+}
+
+#input-section {
+  display: flex;
+  margin: 20px;
+}

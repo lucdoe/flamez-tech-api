@@ -7,9 +7,19 @@ app = Flask(__name__)
 
 
 @app.route('/')
-@app.route('/home')
+@app.route('/home', methods=['GET', 'POST'])
 def home():
-    return render_template('home.html')
+    db = MySQLdb.connect("127.0.0.1", "root", "password", "flamez")
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM user")
+    contacts = cursor.fetchall()
+    lenght_contacts = len(contacts)
+    cursor.execute("SELECT * FROM item")
+    items = cursor.fetchall()
+    lenght_items = len(items)
+    cursor.close()
+    db.close()
+    return render_template('home.html', lenght_contacts=lenght_contacts, lenght_items=lenght_items)
 
 
 @app.route('/contacts', methods=['GET', 'POST'])
@@ -36,13 +46,11 @@ def inventory():
     return render_template('inventory.html', items=items)
 
 
-@app.route('/create_new', methods=['GET', 'POST'])
-def create_new():
-    db = MySQLdb.connect("127.0.0.1", "root", "password", "flamez")
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM user")
-    user = cursor.fetchall()
-    cursor.close()
-    db.close()
+@app.route('/create_new_contact', methods=['GET', 'POST'])
+def create_new_contact():
+    return render_template('create_new_contact.html')
 
-    return render_template('create_new.html', user=user)
+
+@app.route('/create_new_item', methods=['GET', 'POST'])
+def create_new_item():
+    return render_template('create_new_item.html')
