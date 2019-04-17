@@ -2,11 +2,11 @@
 
 --------------------------------------------------
 
-1.) What the project does
-2.) Why the project is useful (for you and me)
-3.) How you can get started with the project
-4.) Where to get help with the project
-5.) Who maintains and contributes to the project
+1. What the project does
+2. Why the project is useful (for you and me)
+3. How you can get started with the project
+4. Where to get help with the project
+5. Who maintains and contributes to the project
 
 --------------------------------------------------
 
