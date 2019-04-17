@@ -1,15 +1,19 @@
 # flamez.tech
 
 --------------------------------------------------
+
 1.) What the project does
 2.) Why the project is useful (for you and me)
 3.) How you can get started with the project
 4.) Where to get help with the project
 5.) Who maintains and contributes to the project
+
 --------------------------------------------------
 
 
+
 1.) **What the project does**
+
 --------------------------------------------------
 
 Contains a Web Application build with **FLASK (Python Microframework, [Flask Docu](http://flask.pocoo.org/docs/1.0/))**.
@@ -31,7 +35,9 @@ It is an Application to administrate Contacts and Inventory and I am looking to 
  --------------------------------------------------
  
  
+ 
   2.) **Why the project is useful (for you and me)**
+  
  --------------------------------------------------
 
  - From a developer site it is an fairly easy project to get started with Flask. 
@@ -41,7 +47,9 @@ It is an Application to administrate Contacts and Inventory and I am looking to 
   --------------------------------------------------
  
  
- 3.) How you can get started with the project
+ 
+ 3.) **How you can get started with the project**
+ 
  --------------------------------------------------
 
 - **Install Process**
@@ -54,13 +62,21 @@ It is an Application to administrate Contacts and Inventory and I am looking to 
  --------------------------------------------------
 
 
-4.) Where to get help with the project
+
+4.) **Where to get help with the project**
+
 --------------------------------------------------
+
 Drop me a message or an E-Mail, looking forward to your questions and I am happy to help! :)
+
 --------------------------------------------------
 
 
-5.) Who maintains and contributes to the project
+
+5.) **Who maintains and contributes to the project**
+
 --------------------------------------------------
+
 Just me, myself and I at the moment!
+
 --------------------------------------------------
