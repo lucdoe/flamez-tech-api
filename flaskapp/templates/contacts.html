@@ -2,7 +2,7 @@
 {% block content %}
 <section id="main">
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..">
-    <button type="button" id="create-new">Add New Contact</button>
+    <button type="button" id="create_new" onclick="window.location.href ='{{ url_for('create_new') }}';">Add New Contact</button>
     <table id="table">
         <tr>
             <th>First Name</th>
@@ -15,17 +15,20 @@
             <th>Inventory Check</th>
             <th>Courses</th>
         </tr>
+        {% for contact in contacts %}
         <tr>
-            <td>Jan Lucca</td>
-            <td>Doerrstein</td>
-            <td>doerrstein.lucca@yahoo.de</td>
-            <td>+49 6074 / 6805571</td>
-            <td>+49 171 5496 100</td>
-            <td>Male</td>
-            <td>Frankfurter Allee 29, Berlin</td>
-            <td>Passed</td>
-            <td>Grund-, Funk-, Kettensaegen-, Atemschutz-</td>
+            <td>{{ contact.1 }}</td>
+            <td>{{ contact.2 }}</td>
+            <td>{{ contact.3 }}</td>
+            <td>{{ contact.4 }}</td>
+            <td>{{ contact.5 }}</td>
+            <td>{{ contact.6 }}</td>
+            <td>{{ contact.7 }}</td>
+            <td>{{ contact.8 }}</td>
+            <td>{{ contact.9 }}</td>
         </tr>
+        {% endfor %}
     </table>
 </section>
+
 {% endblock content %}

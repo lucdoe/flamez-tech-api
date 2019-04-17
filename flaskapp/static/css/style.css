@@ -72,7 +72,7 @@ html {
   margin-top: 50px;
 }
 
-#create-new {
+#create_new {
   border-radius: 12px;
   background-color: orange;
   border: none;
@@ -84,7 +84,7 @@ html {
   padding: 12px 30px;
 }
 
-#create-new:hover {
+#create_new:hover {
   background-color: green;
   cursor: pointer;
 }

@@ -2,26 +2,26 @@
 {% block content %}
 <section id="main">
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..">
-    <button type="button" id="create-new">Add New Item</button>
+    <button type="button" id="create_new" onclick="window.location.href ='{{ url_for('create_new') }}';">Add New Contact</button>
     <table id="table">
         <tr>
             <th>Item Number</th>
             <th>Item Name</th>
-            <th>Owner</th>
             <th>Type</th>
             <th>Status</th>
             <th>Location</th>
             <th>Price</th>
         </tr>
+        {% for item in items %}
         <tr>
-            <td>6578541</td>
-            <td>Fireproof Jacket Beisser v3</td>
-            <td>Lucca Doerrstein</td>
-            <td>Jacket</td>
-            <td>Lent</td>
-            <td>NONE</td>
-            <td>199,89 $</td>
+            <td>{{ item.0 }}</td>
+            <td>{{ item.2 }}</td>
+            <td>{{ item.3 }}</td>
+            <td>{{ item.4 }}</td>
+            <td>{{ item.5 }}</td>
+            <td>{{ item.6 }}</td>
         </tr>
+        {% endfor %}
     </table>
 </section>
 {% endblock content %}
