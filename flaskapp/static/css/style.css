@@ -74,3 +74,10 @@ h1 {
   margin-bottom: 12px; /* Add some space below the input */
 }
 
+#amount-counter {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
