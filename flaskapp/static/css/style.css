@@ -18,7 +18,8 @@ html {
     padding: 14px 16px;
     text-decoration: none;
     /*text-transform: uppercase;*/
-    font-weight: bold;
+    margin-left: 35px;
+    font-size: 25px;
 }
 
 /* Change color on hover */
@@ -54,24 +55,14 @@ html {
     color: white;
 }
 
-#img-center {
-  display: block;
-  margin-top: 10%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-h1 {
-  margin-left: 5%;
-}
 
 #myInput {
   width: 25%; 
   font-size: 16px; /* Increase font-size */
   padding: 12px 20px 12px 15px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
+  border-radius: 12px;
+  margin: 50px;
 }
 
 #amount-counter {
@@ -79,5 +70,22 @@ h1 {
   font-weight: bold;
   font-size: 20px;
   margin-top: 50px;
+}
+
+#create-new {
+  border-radius: 12px;
+  background-color: orange;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding: 12px 30px;
+}
+
+#create-new:hover {
+  background-color: green;
+  cursor: pointer;
 }
 
