@@ -54,3 +54,7 @@ def create_new_contact():
 @app.route('/create_new_item', methods=['GET', 'POST'])
 def create_new_item():
     return render_template('create_new_item.html')
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=80)
