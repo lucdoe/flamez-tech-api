@@ -1,9 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
 <section id="main">
+    <div id="top-search">
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..">
     <button type="button" id="create_new" onclick="window.location.href ='{{ url_for('create_new_contact') }}';">Add New Contact</button>
-    <table id="table">
+    </div>    
+        <table id="table">
+        <div id="table-head">
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
@@ -15,6 +18,8 @@
             <th>Inventory Check</th>
             <th>Courses</th>
         </tr>
+        </div>
+        
         {% for contact in contacts %}
         <tr>
             <td>{{ contact.1 }}</td>
@@ -28,6 +33,9 @@
             <td>{{ contact.9 }}</td>
         </tr>
         {% endfor %}
+        
+        
+         
     </table>
 </section>
 {% endblock content %}
