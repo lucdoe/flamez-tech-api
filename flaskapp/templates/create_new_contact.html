@@ -1,75 +1,88 @@
  {% extends "layout.html" %}
 {% block content %}
-<h1>Create New Contact</h1>
+<h1>New Contact</h1>
 <div>
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset>
                 <legend>Add New Contact</legend>
                 <div>
-                    {{ form.name.label }}
+                    {{ form.first_name.label }}
 
-                    {% if form.name.errors %}
-                        {{ form.name }}
+                    {% if form.first_name.errors %}
+                        {{ form.first_name }}
                         <div>
-                            {% for error in form.name.errors %}
+                            {% for error in form.first_name.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.name }}
+                        {{ form.first_name }}
                     {% endif %}
                 </div>
                 <div>
-                    {{ form.typ.label }}
-                    {% if form.typ.errors %}
-                        {{ form.typ }}
+                    {{ form.last_name.label }}
+                    {% if form.last_name.errors %}
+                        {{ form.last_name }}
                         <div>
-                            {% for error in form.typ.errors %}
+                            {% for error in form.last_name.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.typ }}
+                        {{ form.last_name }}
                     {% endif %}
                 </div>
                 <div>
-                    {{ form.status.label }}
-                    {% if form.status.errors %}
-                        {{ form.status }}
+                    {{ form.mail_adress.label }}
+                    {% if form.mail_adress.errors %}
+                        {{ form.mail_adress }}
                         <div>
-                            {% for error in form.status.errors %}
+                            {% for error in form.mail_adress.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.status }}
+                        {{ form.mail_adress }}
                     {% endif %}
                 </div>
                 <div>
-                    {{ form.location.label }}
-                    {% if form.location.errors %}
-                        {{ form.location }}
+                    {{ form.phone_number.label }}
+                    {% if form.phone_number.errors %}
+                        {{ form.phone_number }}
                         <div>
-                            {% for error in form.location.errors %}
+                            {% for error in form.phone_number.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.location }}
+                        {{ form.phone_number }}
                     {% endif %}
                 </div>
                 <div>
-                    {{ form.price.label }}
-                    {% if form.price.errors %}
-                        {{ form.price }}
+                    {{ form.phone_number_mobile.label }}
+                    {% if form.phone_number_mobile.errors %}
+                        {{ form.phone_number_mobile }}
                         <div>
-                            {% for error in form.price.errors %}
+                            {% for error in form.phone_number_mobile.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.price }}
+                        {{ form.phone_number_mobile }}
+                    {% endif %}
+                </div>
+                 <div>
+                    {{ form.gender.label }}
+                    {% if form.gender.errors %}
+                        {{ form.gender }}
+                        <div>
+                            {% for error in form.gender.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.gender }}
                     {% endif %}
                 </div>
             </fieldset>

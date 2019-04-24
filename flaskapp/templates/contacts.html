@@ -3,6 +3,8 @@
 <div id="top-search">
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..">
     <button type="button" id="create_new" onclick="window.location.href ='{{ url_for('create_new_contact') }}';">Add New Contact</button>
+        <button type="button" id="create_new" onclick="window.location.href ='{{ url_for('search_contacts') }}';">Detailed Search</button>
+
 </div>
 <div class="table_parent">
 <table id='table'>

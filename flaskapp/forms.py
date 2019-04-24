@@ -14,7 +14,7 @@ class NewContactForm(FlaskForm):
                              validators=[DataRequired(), Length(min=2, max=20)])
   phone_number_mobile = StringField('Phone Number Mobile',
                                     validators=[DataRequired(), Length(min=2, max=20)])
-  gender = RadioField('Gender', choices=[('OFF', 'Female'), ('OFF', 'Male'), ('OFF', 'Divers')], validators=[DataRequired()])
+  gender = RadioField('Gender', choices=[('Female', 'Female'), ('Male', 'Male'), ('Divers', 'Divers')], validators=[DataRequired()])
   submit = SubmitField('Save Contact')
 
 
@@ -23,7 +23,7 @@ class NewItemForm(FlaskForm):
                      validators=[DataRequired(), Length(min=2, max=20)])
   typ = StringField('Item Type',
                     validators=[DataRequired(), Length(min=2, max=20)])
-  status = RadioField('Status', choices=[('In Storage'), ('In Repair'), ('Rent Out')])
+  status = RadioField('Status', choices=[('In Storage', 'In Storage'), ('In Repair', 'In Repair'), ('Rent Out', 'Rent Out')])
   location = StringField('Location',
                          validators=[DataRequired(), Length(min=2, max=20)])
   price = StringField('Price',
