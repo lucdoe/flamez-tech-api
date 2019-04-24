@@ -31,6 +31,17 @@ def contacts():
 @app.route('/search_contacts', methods=['GET', 'POST'])
 def search_contacts():
     form = SearchContacts()
+    if request.method == "POST":
+        for users in session.query(User).filter(User.first_name == request.form["first_name"]):
+            return render_template('search_contacts.html', form=form, users=users)
+        for users in session.query(User).filter(User.last_name == request.form["last_name"]):
+            return render_template('search_contacts.html', form=form, users=users)
+        for users in session.query(User).filter(User.mail_adress == request.form["mail_adress"]):
+            return render_template('search_contacts.html', form=form, users=users)
+        for users in session.query(User).filter(User.phone_number == request.form["phone_number"]):
+            return render_template('search_contacts.html', form=form, users=users)
+        for users in session.query(User).filter(User.phone_number_mobile == request.form["phone_number_mobile"]):
+            return render_template('search_contacts.html', form=form, users=users)
     return render_template('search_contacts.html', form=form)
 
 
@@ -66,6 +77,15 @@ def inventory():
 @app.route('/search_inventory', methods=['GET', 'POST'])
 def search_inventory():
     form = SearchInventory()
+    if request.method == "POST":
+        for items in session.query(Item).filter(Item.name == request.form["name"]):
+            return render_template('search_inventory.html', form=form, items=items)
+        for items in session.query(Item).filter(Item.typ == request.form["typ"]):
+            return render_template('search_inventory.html', form=form, items=items)
+        for items in session.query(Item).filter(Item.location == request.form["location"]):
+            return render_template('search_inventory.html', form=form, items=items)
+        for items in session.query(Item).filter(Item.price == request.form["price"]):
+            return render_template('search_inventory.html', form=form, items=items)
     return render_template('search_inventory.html', form=form)
 
 

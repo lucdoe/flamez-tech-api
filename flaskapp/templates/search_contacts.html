@@ -2,7 +2,7 @@
 {% block content %}
 <h1 style=" text-align: center">Detailed Contact Search</h1>
 <div class='DataSearch'>
-        <form id="opacity" method="POST" action="">
+        <form id="opacity" method="POST" action="/search_contacts">
             {{ form.hidden_tag() }}
             <fieldset id="fieldset">
                 <div>
@@ -71,19 +71,6 @@
                         {{ form.phone_number_mobile }}
                     {% endif %}
                 </div>
-                 <div>
-                    {{ form.gender.label }}
-                    {% if form.gender.errors %}
-                        {{ form.gender }}
-                        <div>
-                            {% for error in form.gender.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.gender }}
-                    {% endif %}
-                </div>
             </fieldset>
             <div>
                 {{ form.submit }}
@@ -92,4 +79,39 @@
     </div>
 
 
+    {% if users %}
+         <table id='table'>
+        <thead class="table_child">
+        <tr >
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>E-Mail Adress</th>
+            <th>Phone Number</th>
+            <th>Mobile</th>
+            <th>Gender</th>
+            <th>Adress</th>
+            <th>Inventory Check</th>
+            <th>Courses</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody class ='table_list'>
+        <tr >
+            <td>{{ users.first_name }}</td>
+            <td>{{ users.last_name }}</td>
+            <td>{{ users.mail_adress }}</td>
+            <td>{{ users.phone_number }}</td>
+            <td>{{ users.phone_number_mobile }}</td>
+            <td>{{ users.gender }}</td>
+            <td>{{ users.adress_id }}</td>
+            <td>{{ users.item_id }}</td>
+            <td>{{ users.course_id }}</td>
+            
+        </tr>
+        </tbody>
+</table>
+    {% endif %}
+    
+
 {% endblock content %}
+

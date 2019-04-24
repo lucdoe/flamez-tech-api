@@ -33,19 +33,6 @@
                     {% endif %}
                 </div>
                 <div>
-                    {{ form.status.label }}
-                    {% if form.status.errors %}
-                        {{ form.status }}
-                        <div>
-                            {% for error in form.status.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.status }}
-                    {% endif %}
-                </div>
-                <div>
                     {{ form.location.label }}
                     {% if form.location.errors %}
                         {{ form.location }}
@@ -77,6 +64,32 @@
             </div>
         </form>
     </div>
+
+    {% if items %}
+    <table id='table'>
+        <div class="table_child">
+            <tr>
+                <th>Item Name</th>
+                <th>Item Number</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Location</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </div>
+        <div class="table_list">
+            <tr>
+                <td>{{ items.name }}</td>
+                <td>{{ items.id }}</td>
+                <td>{{ items.typ }}</td>
+                <td>{{ items.status }}</td>
+                <td>{{ items.location }}</td>
+                <td>{{ items.price }}</td>
+            </tr>
+        </div>
+    </table>
+    {% endif %}
 
 
 {% endblock content %}
