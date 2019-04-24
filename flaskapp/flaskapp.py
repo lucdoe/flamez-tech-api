@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
-from forms import NewContactForm, NewItemForm
+from forms import NewContactForm, NewItemForm, SearchInventory, SearchContacts
 from dbstuff import *
 
 
@@ -11,7 +11,9 @@ app.config['SECRET_KEY'] = '77hf2HQeW789tccnt278t!t85cv8296t?8'
 @app.route('/')
 @app.route('/home', methods=['GET', 'POST'])
 def home():
-    return render_template('home.html')
+    lenght_items = session.query(Item).count()
+    lenght_contacts = session.query(User).count()
+    return render_template('home.html', lenght_contacts=lenght_contacts, lenght_items=lenght_items)
 
 
 @app.route('/contacts', methods=['GET', 'POST'])
@@ -22,7 +24,8 @@ def contacts():
 
 @app.route('/search_contacts', methods=['GET', 'POST'])
 def search_contacts():
-    return render_template('search_contacts.html')
+    form = SearchContacts()
+    return render_template('search_contacts.html', form=form)
 
 
 @app.route('/create_new_contact', methods=['GET', 'POST'])
@@ -42,9 +45,12 @@ def inventory():
     inventory = session.query(Item).order_by(Item.id).all()
     return render_template('inventory.html', inventory=inventory)
 
-@app.route('/search_contacts', methods=['GET', 'POST'])
+
+@app.route('/search_inventory', methods=['GET', 'POST'])
 def search_inventory():
-    return render_template('search_inventory.html')
+    form = SearchInventory()
+    return render_template('search_inventory.html', form=form)
+
 
 @app.route('/create_new_item', methods=['GET', 'POST'])
 def create_new_item():

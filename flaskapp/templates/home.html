@@ -1,9 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<body>
-    <!-- <p id="amount-counter"> Amount Contacts: {{ lenght_contacts }} </p>
-    <p id="amount-counter"> Amount Inventory: {{ lenght_items }} </p> -->
-    <h1> Test</h1>
+<h1 style="color: white; font-size: 50px; text-align:center;"> Welcome back!</h1>
+<body class="home">
+    <p style="text-align:center; color: white;"> Here you will see how many Contacts and how many Items you have at the moment.</p>
+    <div class='counter_box'>
+        <p id="amount-counter"> Amount Contacts: {{ lenght_contacts }} </p>
+    </div>
+    <div class='counter_box'>
+        <p id="amount-counter"> Amount Inventory: {{ lenght_items }} </p>
+    </div>
 </body>
 {% endblock content %}

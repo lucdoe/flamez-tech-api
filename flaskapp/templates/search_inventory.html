@@ -1,7 +1,83 @@
 {% extends "layout.html" %}
 {% block content %}
+<h1>Detailed Inventory Search</h1>
+<div class='DataSearch'>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset>
+                <div>
+                    {{ form.name.label }}
 
-TEST
+                    {% if form.name.errors %}
+                        {{ form.name }}
+                        <div>
+                            {% for error in form.name.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.name }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.typ.label }}
+                    {% if form.typ.errors %}
+                        {{ form.typ }}
+                        <div>
+                            {% for error in form.typ.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.typ }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.status.label }}
+                    {% if form.status.errors %}
+                        {{ form.status }}
+                        <div>
+                            {% for error in form.status.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.status }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.location.label }}
+                    {% if form.location.errors %}
+                        {{ form.location }}
+                        <div>
+                            {% for error in form.location.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.location }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.price.label }}
+                    {% if form.price.errors %}
+                        {{ form.price }}
+                        <div>
+                            {% for error in form.price.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.price }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div>
+                {{ form.submit }}
+            </div>
+        </form>
+    </div>
 
 
 {% endblock content %}
+

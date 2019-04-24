@@ -4,6 +4,16 @@ html {
 
 .main {
     margin-top: 75px;
+
+}
+
+.counter_box {
+    width: 25%;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    height: 25px;
 }
 
 /* Style the top navigation bar */
@@ -41,10 +51,10 @@ ul {
 
 /* Change color on hover */
 .topnav a:hover {
-    background-color: yellow;
+    background-color: lightblue;
     color: black;
     border-radius: 5px;
-    height: 25px;
+    height: 22px;
 }
 
 #table {
@@ -70,7 +80,7 @@ ul {
 }
 
 #table tr:hover {
-    background-color: yellow;
+    background-color: lightblue;
 }
 
 #table th {
@@ -113,7 +123,7 @@ ul {
 }
 
 #create_new:hover {
-    background-color: #DCFD99;
+    background-color: lightblue;
     color: black;
     cursor: pointer;
 }
@@ -150,7 +160,7 @@ ul {
 }
 
 #Submit:hover {
-    background-color: #DCFD99;
+    background-color: lightblue;
     color: black;
     cursor: pointer;
 }
@@ -167,4 +177,14 @@ ul {
 
 fieldset {
   margin-top: 50px;
+}
+
+.DataSearch {
+    text-align: center;
+}
+
+.home {
+    background-image: url('/static/picture/fireman.jpg');
+    background-size: cover;
+    margin-top: 200px;
 }
