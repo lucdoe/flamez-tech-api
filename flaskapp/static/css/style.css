@@ -1,5 +1,6 @@
 html {
     font-family: 'Roboto', sans-serif;
+    
 }
 
 .main {
@@ -159,7 +160,26 @@ ul {
     padding: 12px 30px;
 }
 
+
 #Submit:hover {
+    background-color: lightblue;
+    color: black;
+    cursor: pointer;
+}
+
+#submit {
+    border-radius: 10px;
+    background-color: #FF0000;
+    border: none;
+    color: #F2FEFE;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 12px 30px;
+}
+
+#submit:hover {
     background-color: lightblue;
     color: black;
     cursor: pointer;
@@ -179,8 +199,22 @@ fieldset {
   margin-top: 50px;
 }
 
+#fieldset {
+    border: none;
+}
+
+#opacity {
+    opacity: 1;
+}
+
 .DataSearch {
     text-align: center;
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    height: 300px;
+    border: none;
+    border-radius: 15px;
 }
 
 .home {

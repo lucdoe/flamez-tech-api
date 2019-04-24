@@ -1,10 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>Detailed Inventory Search</h1>
+<h1 style=" text-align: center">Detailed Inventory Search</h1>
 <div class='DataSearch'>
         <form method="POST" action="">
             {{ form.hidden_tag() }}
-            <fieldset>
+            <fieldset id="fieldset">
                 <div>
                     {{ form.name.label }}
 
