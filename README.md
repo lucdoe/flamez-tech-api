@@ -25,8 +25,8 @@ It is an Application to administrate Contacts and Inventory and I am looking to 
 
 - Backend:
   - Python
-  - Flask
-  - MySQL (SQLAlchemy Flask Module)
+  - Flask (+ WTForms for dynamiclly creating HTML Forms) 
+  - MySQL (SQLAlchemy Flask Module -> ORM)
 
 - Frontend:
   - Javascript
