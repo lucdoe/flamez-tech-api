@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
-from forms import NewContactForm, NewItemForm
-from dbstuff import *
+from flaskapp.forms import NewContactForm, NewItemForm
+from flaskapp.dbstuff import *
 
 
 app = Flask(__name__)
