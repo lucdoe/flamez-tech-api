@@ -1,29 +1,81 @@
-{% extends "layout.html" %}
+ {% extends "layout.html" %}
 {% block content %}
 <h1>Create New Contact</h1>
-<div id="input-section">
-<div id="input">
-    <label id="input_label" for="first_name">First Name</label><br>
-    <input id="input_field" type="text" name="first_name" placeholder="First Name"> <br>
-</div>
-<div id="input">
-    <label id="input_label" for="first_name">Last Name</label><br>
-    <input id="input_field" type="text" name="last_name" placeholder="Last Name"> <br>
-</div>
-<div id="input">
-    <label id="input_label" for="first_name">Mail adress</label><br>
-    <input id="input_field" type="text" name="mail_adress" placeholder="E-Mail"> <br>
-</div>
-<div id="input">
-    <label id="input_label" for="first_name">Phone Number</label><br>
-    <input id="input_field" type="text" name="phone_number" placeholder="Phone"> <br>
-</div>
-<div id="input">
-    <label id="input_label" for="first_name">Mobile Number</label><br>
-    <input id="input_field" type="text" name="phone_number_mobile" placeholder="Mobile"> <br>
-</div>
-</div>
-<form>
-    <button id="Submit" type="submit" value="Send"> Submit </button>
-</form>
+<div>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset>
+                <legend>Add New Contact</legend>
+                <div>
+                    {{ form.name.label }}
+
+                    {% if form.name.errors %}
+                        {{ form.name }}
+                        <div>
+                            {% for error in form.name.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.name }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.typ.label }}
+                    {% if form.typ.errors %}
+                        {{ form.typ }}
+                        <div>
+                            {% for error in form.typ.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.typ }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.status.label }}
+                    {% if form.status.errors %}
+                        {{ form.status }}
+                        <div>
+                            {% for error in form.status.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.status }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.location.label }}
+                    {% if form.location.errors %}
+                        {{ form.location }}
+                        <div>
+                            {% for error in form.location.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.location }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.price.label }}
+                    {% if form.price.errors %}
+                        {{ form.price }}
+                        <div>
+                            {% for error in form.price.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.price }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div>
+                {{ form.submit }}
+            </div>
+        </form>
+    </div>
 {% endblock content %}

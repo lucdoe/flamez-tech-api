@@ -18,7 +18,3 @@ function myFunction() {
         }
     }
 }
-
-let data = [{
-  name: "bla",
-}]
