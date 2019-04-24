@@ -1,4 +1,4 @@
 from waitress import serve
-import flaskapp.__init__
+import flaskapp.flaskapp.py
 
-serve(flaskapp.__init__.app, host='0.0.0.0', port=80)
+serve(flaskapp.flaskapp.py.app, host='0.0.0.0', port=80)
