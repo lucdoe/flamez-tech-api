@@ -2,6 +2,10 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+.main {
+    margin-top: 75px;
+}
+
 /* Style the top navigation bar */
 .topnav {
     overflow: hidden;
@@ -40,16 +44,12 @@ html {
 #table {
     border-collapse: collapse;
     width: 100%;
+    height: 20px;
+   overflow: hidden;
 }
 
-.overflow {
-    overflow: scroll;
-}
-
-#table-head {
-    position: fixed;
-    z-index: 5;
-    width: 100%;
+.table_list {
+    overflow: hidden;
 }
 
 
@@ -113,8 +113,8 @@ html {
 }
 
 #top-search {
-  margin-top: 25px;
-  margin-bottom: 50px;
+  margin-top: 75px;
+  margin-bottom: 25px;
   margin-left: 25px;
 }
 
@@ -157,4 +157,8 @@ html {
 .container {
   margin-top: 100px;
   margin-left: 25px;
+}
+
+fieldset {
+  margin-top: 75px;
 }
