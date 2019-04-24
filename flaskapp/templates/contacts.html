@@ -19,6 +19,7 @@
             <th>Adress</th>
             <th>Inventory Check</th>
             <th>Courses</th>
+            <th></th>
         </tr>
         </thead>
         <tbody class ='table_list'>
@@ -33,6 +34,7 @@
             <td>{{ contact.adress_id }}</td>
             <td>{{ contact.item_id }}</td>
             <td>{{ contact.course_id }}</td>
+            <td> <form action="/contacts" method="post"> <input style="display: none;" type="text" value="{{ contact.id }}" name="id"> <input type="submit" value="Delete" name="submitdelete"></form> </td>
             
         </tr>
         {% endfor %}

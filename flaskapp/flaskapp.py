@@ -18,6 +18,12 @@ def home():
 
 @app.route('/contacts', methods=['GET', 'POST'])
 def contacts():
+    if request.method == "POST":
+        contact_id = request.form["id"]
+        delete = session.query(User).filter(User.id == contact_id).delete()
+        session.commit()
+        contacts = session.query(User).order_by(User.id).all()
+        return render_template('contacts.html', contacts=contacts)
     contacts = session.query(User).order_by(User.id).all()
     return render_template('contacts.html', contacts=contacts)
 
@@ -40,8 +46,19 @@ def create_new_contact():
     return render_template('create_new_contact.html', form=form)
 
 
+@app.route('/delete_contact', methods=['GET', 'POST'])
+def delete_contact():
+    return render_template('delete_contact.html')
+
+
 @app.route('/inventory', methods=['GET', 'POST'])
 def inventory():
+    if request.method == "POST":
+        item_id = request.form["id"]
+        delete = session.query(Item).filter(Item.id == item_id).delete()
+        session.commit()
+        inventory = session.query(Item).order_by(Item.id).all()
+        return render_template('inventory.html', inventory=inventory)
     inventory = session.query(Item).order_by(Item.id).all()
     return render_template('inventory.html', inventory=inventory)
 
