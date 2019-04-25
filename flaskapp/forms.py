@@ -1,6 +1,29 @@
+"""
+### FORMS File ###
+- contains all forms used in the application
+- Files are created out of Python classes using flask_wtf/ wtforms
+- there is no template/HTML File need because it is a function which is called and then being displayed
+"""
+
+# importing Modules
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, BooleanField, RadioField
+# StringField(creates simple Text Input Field)
+# RadioField(creates Radio Field)
+# SubmitField(creates a Submit button)
+from wtforms import StringField, SubmitField, RadioField
+# imports validators which I am using to validate if the user did put in valid values
 from wtforms.validators import DataRequired, Length, Email, EqualTo, Optional
+
+
+# the following classes follow the same principles
+"""
+1. Class object is defined it refers to FlaskForms, can also be diffrent
+2. The Name of the Form is defined
+3. The type of the Form is defined
+    - imported from wtforms, there is a StringField, SubmitField and RadioField available here
+    - their Label(What the User sees) is defined next
+    - next validators are defined, they can be Optional() or DataRequired() + an optional Lenght of the Input
+"""
 
 
 class SearchInventory(FlaskForm):
