@@ -153,8 +153,6 @@ def create_new_contact():
         # session values are now commited to the Database Table 'User'
         session.commit()
 
-        # afterward displaying a success message
-        flash(f'User has been created.', 'success')
         # and finally redirecting back to contacts.html
         return redirect(url_for('contacts'))
 
@@ -164,7 +162,35 @@ def create_new_contact():
 
 @app.route('/contacts_update', methods=['GET', 'POST'])
 def contacts_update():
+    """
+    >>> Contact Page // Contacts Update <<<
+    - Updates Contact entry
+    """
+
+    # importing Contact Update Form from forms.py, and stores it in form
     form = ContactsUpdate()
+
+    # if Form Input is valid(filled out and valid)
+    if form.validate_on_submit():
+        # the data gets requested from the forms
+        # next stored in a variable as their Database Column Name
+        # everthing stored in user variable
+        user = User(first_name=form.first_name.data,
+                    last_name=form.last_name.data,
+                    mail_adress=form.mail_adress.data,
+                    phone_number=form.phone_number.data,
+                    phone_number_mobile=form.phone_number_mobile.data,
+                    gender=form.gender.data)
+
+        # updated item given to add() function
+        # adds stored values to the session
+        session.add(user)
+        # session values are now commited to the Database Table 'Item'
+        session.commit()
+        # rendering template, returning form and user
+        return render_template('contacts.html', form=form, user=user)
+
+    # rendering template, returning form
     return render_template('contacts_update.html', form=form)
 
 
@@ -277,5 +303,32 @@ def create_new_item():
 
 @app.route('/inventory_update', methods=['GET', 'POST'])
 def inventory_update():
+    """
+    >>> Inventory Page // Inventory Update <<<
+    - Updates Item entry
+    """
+
+    # importing Inventory Update Form from forms.py, and stores it in form
     form = InventoryUpdate()
-    return render_template('inventory_update.html', form=form)
+
+    # if Form Input is valid(filled out and valid)
+    if form.validate_on_submit():
+        # the data gets requested from the forms
+        # next stored in a variable as their Database Column Name
+        # everthing stored in user variable
+        item = Item(name=form.name.data,
+                    typ=form.typ.data,
+                    status=form.status.data,
+                    location=form.location.data,
+                    price=form.price.data)
+
+        # updated item given to add() function
+        # adds stored values to the session
+        session.add(item)
+        # session values are now commited to the Database Table 'Item'
+        session.commit()
+        # rendering template, returning form and item
+        return render_template('inventory.html', form=form, item=item)
+
+    # rendering template, returning form and item
+    return render_template('inventory_update.html', form=form, item=item)
