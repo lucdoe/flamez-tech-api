@@ -3,42 +3,42 @@
 <div id="top-search">
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..">
     <button type="button" id="create_new" onclick="window.location.href ='{{ url_for('create_new_contact') }}';">Add New Contact</button>
-        <button type="button" id="create_new" onclick="window.location.href ='{{ url_for('search_contacts') }}';">Detailed Search</button>
-
+    <button type="button" id="create_new" onclick="window.location.href ='{{ url_for('search_contacts') }}';">Detailed Search</button>
 </div>
 <div class="table_parent">
-<table id='table'>
+    <table id='table'>
         <thead class="table_child">
-        <tr >
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>E-Mail Adress</th>
-            <th>Phone Number</th>
-            <th>Mobile</th>
-            <th>Gender</th>
-            <th>Adress</th>
-            <th>Inventory Check</th>
-            <th>Courses</th>
-            <th></th>
-        </tr>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>E-Mail Adress</th>
+                <th>Phone Number</th>
+                <th>Mobile</th>
+                <th>Gender</th>
+                <th>Adress</th>
+                <th>Inventory Check</th>
+                <th>Courses</th>
+                <th></th>
+            </tr>
         </thead>
-        <tbody class ='table_list'>
-        {% for contact in contacts %}
-        <tr >
-            <td>{{ contact.first_name }}</td>
-            <td>{{ contact.last_name }}</td>
-            <td>{{ contact.mail_adress }}</td>
-            <td>{{ contact.phone_number }}</td>
-            <td>{{ contact.phone_number_mobile }}</td>
-            <td>{{ contact.gender }}</td>
-            <td>{{ contact.adress_id }}</td>
-            <td>{{ contact.item_id }}</td>
-            <td>{{ contact.course_id }}</td>
-            <td> <form action="/contacts" method="post"> <input style="display: none;" type="text" value="{{ contact.id }}" name="id"> <input type="submit" value="Delete" name="submitdelete"></form> </td>
-            
-        </tr>
-        {% endfor %}
+        <tbody class='table_list'>
+            {% for contact in contacts %}
+            <tr>
+                <td>{{ contact.first_name }}</td>
+                <td>{{ contact.last_name }}</td>
+                <td>{{ contact.mail_adress }}</td>
+                <td>{{ contact.phone_number }}</td>
+                <td>{{ contact.phone_number_mobile }}</td>
+                <td>{{ contact.gender }}</td>
+                <td>{{ contact.adress_id }}</td>
+                <td>{{ contact.item_id }}</td>
+                <td>{{ contact.course_id }}</td>
+                <td>
+                    <form action="/contacts" method="post"> <input style="display: none;" type="text" value="{{ contact.id }}" name="id"> <input type="submit" value="Delete" name="submitdelete"></form>
+                </td>
+            </tr>
+            {% endfor %}
         </tbody>
-</table>
+    </table>
 </div>
 {% endblock content %}

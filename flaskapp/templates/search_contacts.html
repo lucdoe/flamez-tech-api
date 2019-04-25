@@ -2,87 +2,84 @@
 {% block content %}
 <h1 style=" text-align: center">Detailed Contact Search</h1>
 <div class='DataSearch'>
-        <form id="opacity" method="POST" action="/search_contacts">
-            {{ form.hidden_tag() }}
-            <fieldset id="fieldset">
-                <div>
-                    {{ form.first_name.label }}
-
-                    {% if form.first_name.errors %}
-                        {{ form.first_name }}
-                        <div>
-                            {% for error in form.first_name.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.first_name }}
-                    {% endif %}
-                </div>
-                <div>
-                    {{ form.last_name.label }}
-                    {% if form.last_name.errors %}
-                        {{ form.last_name }}
-                        <div>
-                            {% for error in form.last_name.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.last_name }}
-                    {% endif %}
-                </div>
-                <div>
-                    {{ form.mail_adress.label }}
-                    {% if form.mail_adress.errors %}
-                        {{ form.mail_adress }}
-                        <div>
-                            {% for error in form.mail_adress.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.mail_adress }}
-                    {% endif %}
-                </div>
-                <div>
-                    {{ form.phone_number.label }}
-                    {% if form.phone_number.errors %}
-                        {{ form.phone_number }}
-                        <div>
-                            {% for error in form.phone_number.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.phone_number }}
-                    {% endif %}
-                </div>
-                <div>
-                    {{ form.phone_number_mobile.label }}
-                    {% if form.phone_number_mobile.errors %}
-                        {{ form.phone_number_mobile }}
-                        <div>
-                            {% for error in form.phone_number_mobile.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.phone_number_mobile }}
-                    {% endif %}
-                </div>
-            </fieldset>
+    <form id="opacity" method="POST" action="/search_contacts">
+        {{ form.hidden_tag() }}
+        <fieldset id="fieldset">
             <div>
-                {{ form.submit }}
+                {{ form.first_name.label }}
+                {% if form.first_name.errors %}
+                {{ form.first_name }}
+                <div>
+                    {% for error in form.first_name.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.first_name }}
+                {% endif %}
             </div>
-        </form>
-    </div>
-
-
-    {% if users %}
-         <table id='table'>
-        <thead class="table_child">
-        <tr >
+            <div>
+                {{ form.last_name.label }}
+                {% if form.last_name.errors %}
+                {{ form.last_name }}
+                <div>
+                    {% for error in form.last_name.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.last_name }}
+                {% endif %}
+            </div>
+            <div>
+                {{ form.mail_adress.label }}
+                {% if form.mail_adress.errors %}
+                {{ form.mail_adress }}
+                <div>
+                    {% for error in form.mail_adress.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.mail_adress }}
+                {% endif %}
+            </div>
+            <div>
+                {{ form.phone_number.label }}
+                {% if form.phone_number.errors %}
+                {{ form.phone_number }}
+                <div>
+                    {% for error in form.phone_number.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.phone_number }}
+                {% endif %}
+            </div>
+            <div>
+                {{ form.phone_number_mobile.label }}
+                {% if form.phone_number_mobile.errors %}
+                {{ form.phone_number_mobile }}
+                <div>
+                    {% for error in form.phone_number_mobile.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.phone_number_mobile }}
+                {% endif %}
+            </div>
+        </fieldset>
+        <div>
+            {{ form.submit }}
+        </div>
+    </form>
+</div>
+{% if users %}
+<table id='table'>
+    <thead class="table_child">
+        <tr>
             <th>First Name</th>
             <th>Last Name</th>
             <th>E-Mail Adress</th>
@@ -94,9 +91,9 @@
             <th>Courses</th>
             <th></th>
         </tr>
-        </thead>
-        <tbody class ='table_list'>
-        <tr >
+    </thead>
+    <tbody class='table_list'>
+        <tr>
             <td>{{ users.first_name }}</td>
             <td>{{ users.last_name }}</td>
             <td>{{ users.mail_adress }}</td>
@@ -106,12 +103,8 @@
             <td>{{ users.adress_id }}</td>
             <td>{{ users.item_id }}</td>
             <td>{{ users.course_id }}</td>
-            
         </tr>
-        </tbody>
+    </tbody>
 </table>
-    {% endif %}
-    
-
+{% endif %}
 {% endblock content %}
-

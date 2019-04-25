@@ -2,95 +2,90 @@
 {% block content %}
 <h1 style=" text-align: center">Detailed Inventory Search</h1>
 <div class='DataSearch'>
-        <form method="POST" action="">
-            {{ form.hidden_tag() }}
-            <fieldset id="fieldset">
-                <div>
-                    {{ form.name.label }}
-
-                    {% if form.name.errors %}
-                        {{ form.name }}
-                        <div>
-                            {% for error in form.name.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.name }}
-                    {% endif %}
-                </div>
-                <div>
-                    {{ form.typ.label }}
-                    {% if form.typ.errors %}
-                        {{ form.typ }}
-                        <div>
-                            {% for error in form.typ.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.typ }}
-                    {% endif %}
-                </div>
-                <div>
-                    {{ form.location.label }}
-                    {% if form.location.errors %}
-                        {{ form.location }}
-                        <div>
-                            {% for error in form.location.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.location }}
-                    {% endif %}
-                </div>
-                <div>
-                    {{ form.price.label }}
-                    {% if form.price.errors %}
-                        {{ form.price }}
-                        <div>
-                            {% for error in form.price.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.price }}
-                    {% endif %}
-                </div>
-            </fieldset>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset id="fieldset">
             <div>
-                {{ form.submit }}
+                {{ form.name.label }}
+                {% if form.name.errors %}
+                {{ form.name }}
+                <div>
+                    {% for error in form.name.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.name }}
+                {% endif %}
             </div>
-        </form>
+            <div>
+                {{ form.typ.label }}
+                {% if form.typ.errors %}
+                {{ form.typ }}
+                <div>
+                    {% for error in form.typ.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.typ }}
+                {% endif %}
+            </div>
+            <div>
+                {{ form.location.label }}
+                {% if form.location.errors %}
+                {{ form.location }}
+                <div>
+                    {% for error in form.location.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.location }}
+                {% endif %}
+            </div>
+            <div>
+                {{ form.price.label }}
+                {% if form.price.errors %}
+                {{ form.price }}
+                <div>
+                    {% for error in form.price.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.price }}
+                {% endif %}
+            </div>
+        </fieldset>
+        <div>
+            {{ form.submit }}
+        </div>
+    </form>
+</div>
+{% if items %}
+<table id='table'>
+    <div class="table_child">
+        <tr>
+            <th>Item Name</th>
+            <th>Item Number</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Location</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
     </div>
-
-    {% if items %}
-    <table id='table'>
-        <div class="table_child">
-            <tr>
-                <th>Item Name</th>
-                <th>Item Number</th>
-                <th>Type</th>
-                <th>Status</th>
-                <th>Location</th>
-                <th>Price</th>
-                <th></th>
-            </tr>
-        </div>
-        <div class="table_list">
-            <tr>
-                <td>{{ items.name }}</td>
-                <td>{{ items.id }}</td>
-                <td>{{ items.typ }}</td>
-                <td>{{ items.status }}</td>
-                <td>{{ items.location }}</td>
-                <td>{{ items.price }}</td>
-            </tr>
-        </div>
-    </table>
-    {% endif %}
-
-
+    <div class="table_list">
+        <tr>
+            <td>{{ items.name }}</td>
+            <td>{{ items.id }}</td>
+            <td>{{ items.typ }}</td>
+            <td>{{ items.status }}</td>
+            <td>{{ items.location }}</td>
+            <td>{{ items.price }}</td>
+        </tr>
+    </div>
+</table>
+{% endif %}
 {% endblock content %}
-

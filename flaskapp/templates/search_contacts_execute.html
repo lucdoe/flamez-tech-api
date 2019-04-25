@@ -1,8 +1,6 @@
 {% extends "search_contacts.html" %}
 {% block result %}
-
 {% if user %}
-        {{ user.first_name }}
-    {% endif %}
-
+{{ user.first_name }}
+{% endif %}
 {% endblock result %}
