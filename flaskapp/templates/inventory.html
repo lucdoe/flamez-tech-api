@@ -16,6 +16,7 @@
                 <th>Location</th>
                 <th>Price</th>
                 <th></th>
+                <th></th>
             </tr>
         </div>
         <div class="table_list">
@@ -29,6 +30,9 @@
                 <td>{{ item.price }}</td>
                 <td>
                     <form action="/inventory" method="post"> <input style="display: none;" type="text" value="{{ item.id }}" name="id"> <input type="submit" value="Delete" name="submitdelete"></form>
+                </td>
+                <td>
+                    <form action="/inventory_update" method="post"> <input style="display: none;" type="text" value="{{ item.id }}" name="id"> <input type="submit" value="Update" name="submitupdate"></form>
                 </td>
             </tr>
             {% endfor %}

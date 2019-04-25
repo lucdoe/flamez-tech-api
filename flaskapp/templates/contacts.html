@@ -19,6 +19,8 @@
                 <th>Inventory Check</th>
                 <th>Courses</th>
                 <th></th>
+                <th></th>
+
             </tr>
         </thead>
         <tbody class='table_list'>
@@ -35,6 +37,9 @@
                 <td>{{ contact.course_id }}</td>
                 <td>
                     <form action="/contacts" method="post"> <input style="display: none;" type="text" value="{{ contact.id }}" name="id"> <input type="submit" value="Delete" name="submitdelete"></form>
+                </td>
+                <td>
+                    <form action="/contacts_update" method="post"> <input style="display: none;" type="text" value="{{ contact.id }}" name="id"> <input type="submit" value="Update" name="submitupdate"></form>
                 </td>
             </tr>
             {% endfor %}

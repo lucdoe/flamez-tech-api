@@ -16,7 +16,7 @@
 # url_for(needed in combination with redirect to create a link)
 from flask import Flask, render_template, request, flash, redirect, url_for
 # importing ownwritten Forms from forms.py(self explained what they might be for)
-from forms import NewContactForm, NewItemForm, SearchInventory, SearchContacts
+from forms import NewContactForm, NewItemForm, SearchInventory, SearchContacts, InventoryUpdate, ContactsUpdate
 # importing the database session I work with e.g. ->'session'<-.add() (detailed info in dbstuff.py)
 from dbstuff import *
 
@@ -162,6 +162,12 @@ def create_new_contact():
     return render_template('create_new_contact.html', form=form)
 
 
+@app.route('/contacts_update', methods=['GET', 'POST'])
+def contacts_update():
+    form = ContactsUpdate()
+    return render_template('contacts_update.html', form=form)
+
+
 @app.route('/inventory', methods=['GET', 'POST'])
 def inventory():
     """
@@ -267,3 +273,9 @@ def create_new_item():
 
     # rendering template, returning form
     return render_template('create_new_item.html', form=form)
+
+
+@app.route('/inventory_update', methods=['GET', 'POST'])
+def inventory_update():
+    form = InventoryUpdate()
+    return render_template('inventory_update.html', form=form)
