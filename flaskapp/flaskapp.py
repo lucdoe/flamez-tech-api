@@ -29,7 +29,7 @@ app = Flask(__name__)
 
 # used for securely signing the session cookie and can be used for any other security related needs
 # should not be shown/ know by some1 else
-app.config['SECRET_KEY'] = '77hf2HQeW789tccnt278t!t85cv8296t?8'
+app.config['SECRET_KEY'] = 'nearly_secure'
 
 
 @app.route('/')
