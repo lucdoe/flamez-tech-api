@@ -3,31 +3,29 @@
 - This is the heart of the application (also often known as __init__.py)
 - defines all URL / routes and what each route should do
 - imports Modules externally(not written by me e.g. flask) and internally(written by me e.g. forms)
-
->> “Oh! Now we see the violence inherent in the system! Help, help, I’m being repressed!” <<   - Monty Python and the Holy Grail
 """
 
-# here I import external/ inernal Modules. Why I use them?:
+# importing external/ inernal Modules
 
-# render_template(for returning Templates),
-# request(to get data from forms),
-# flash(for flashing messages to the user),
-# redirect(for redirecting to a choosen page)
+# render_template(returning Templates),
+# request(data from forms),
+# flash(flashing messages to the user),
+# redirect(redirecting to a choosen page)
 # url_for(needed in combination with redirect to create a link)
 from flask import Flask, render_template, request, flash, redirect, url_for
-# importing ownwritten Forms from forms.py(self explained what they might be for)
+# importing ownwritten Forms from forms.py
 from forms import NewContactForm, NewItemForm, SearchInventory, SearchContacts, InventoryUpdate, ContactsUpdate
-# importing the database session I work with e.g. ->'session'<-.add() (detailed info in dbstuff.py)
+# importing database session
 from dbstuff import *
 
 
 # creating an instance of the Flask class, stored in app
 # __name__ is set equal to '__main__' which runs the app
-# also needed so that Flask knows where to look for templates, static files, and so on
+# also needed so Flask knows where to look for templates, static files, ...
 app = Flask(__name__)
 
 
-# used for securely signing the session cookie and can be used for any other security related needs
+# used for securely signing the session cookie, can be used for any other security related needs
 # should not be shown/ know by some1 else
 app.config['SECRET_KEY'] = 'nearly_secure'
 
@@ -40,7 +38,7 @@ def home():
     - displaying how many Contacts & Items the User has
     """
 
-    # querying databse tables and fetching lenght of tables, stored in lenght_x
+    # querying databse tables, fetching lenght of tables
     lenght_items = session.query(Item).count()
     lenght_contacts = session.query(User).count()
 
@@ -60,12 +58,12 @@ def contacts():
 
     # Delete Button triggers POST method
     if request.method == "POST":
-        # getting User ID from non displayed form and stores it in contact_id
+        # getting User ID from non displayed form
         contact_id = request.form["id"]
         # defines delete querys with WHERE condition User ID
         delete = session.query(User).filter(
             User.id == contact_id).delete()
-        # commit() flushes session and executes the delete
+        # commit() flushes session, executes the delete
         session.commit()
         # getting all Contacts from User table
         contacts = session.query(User).order_by(User.id).all()
