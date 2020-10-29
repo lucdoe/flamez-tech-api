@@ -1,5 +1,7 @@
 # flamez.tech
 
+## The little child of the orgisoft_api, which is a bigger and better implementation of the main idea behind this.
+
 --------------------------------------------------
 
 1. What the project does
@@ -41,8 +43,6 @@ It is an Application to administrate Contacts and Inventory and I am looking to 
  --------------------------------------------------
 
  - From a developer site it is an fairly easy project to get started with Flask. 
- - From a User site its made to be as simple as possible 
- - It is free!?
  - Is looking to support or to be used by Organizations with Inventory and Contacts (every Organization? LOL)
   --------------------------------------------------
  
