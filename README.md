@@ -1,17 +1,11 @@
 # flamez.tech
 
-## The little child of the orgisoft_api, which is a bigger and better implementation of the main idea behind this.
-
 --------------------------------------------------
 
 1. What the project does
-2. Why the project is useful (for you and me)
-3. How you can get started with the project
-4. Where to get help with the project
-5. Who maintains and contributes to the project
+2. How you can get started with the project
 
 --------------------------------------------------
-
 
 
 1.) **What the project does**
@@ -38,17 +32,7 @@ It is an Application to administrate Contacts and Inventory and I am looking to 
  
  
  
-  2.) **Why the project is useful (for you and me)**
-  
- --------------------------------------------------
-
- - From a developer site it is an fairly easy project to get started with Flask. 
- - Is looking to support or to be used by Organizations with Inventory and Contacts (every Organization? LOL)
-  --------------------------------------------------
- 
- 
- 
- 3.) **How you can get started with the project**
+ 2.) **How you can get started with the project**
  
  --------------------------------------------------
 
@@ -60,23 +44,3 @@ It is an Application to administrate Contacts and Inventory and I am looking to 
   - type: "$ export FLASK_APP=flaskapp" , to start in Dev. Mode on top type: "$ export FLASK_ENV=development"
   - Afterwards the Server starts and you can access the application under localhost:5000(http://127.0.0.1:5000/)
  --------------------------------------------------
-
-
-
-4.) **Where to get help with the project**
-
---------------------------------------------------
-
-Drop me a message or an E-Mail, looking forward to your questions and I am happy to help! :)
-
---------------------------------------------------
-
-
-
-5.) **Who maintains and contributes to the project**
-
---------------------------------------------------
-
-Just me, myself and I at the moment!
-
---------------------------------------------------
